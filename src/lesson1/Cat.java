@@ -2,7 +2,7 @@ package lesson1;
 
 public class Cat
 {
-    public static int count;
+    public static int count=0;
     private double originWeight;
     private double weight;
 
@@ -32,12 +32,25 @@ public class Cat
 
     public void feed(Double amount)
     {
-        weight = weight + amount;
+        if(weight > maxWeight) {
+            count=count-1;
+            System.out.println("Your cat is fucking dead, it can`t eat!");
+        }
+        else
+            weight = weight + amount;
+
     }
 
     public void drink(Double amount)
     {
+
+        if(weight < minWeight) {
+            count=count-1;
+            System.out.println("Your cat is fucking dead, it can`t drink!");
+        }
+        else
         weight = weight + amount;
+
     }
 
     public Double getWeight()
@@ -48,7 +61,7 @@ public class Cat
     public String getStatus()
     {
         if(weight < minWeight) {
-            count--;
+            count=count-1;
             return "Dead";
         }
         else if(weight > maxWeight) {

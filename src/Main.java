@@ -19,6 +19,8 @@ public class Main {
     public static void main(String[] args)
     {
         int a;
+        int gitCheck;
+        boolean gitProverka;
         double incomeNeedForInvestments = 0.1;
         while (true) {
             System.out.println("Введите сумму доходов компании за месяц " +

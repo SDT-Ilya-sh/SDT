@@ -18,7 +18,6 @@ public class Main {
 
     public static void main(String[] args)
     {
-        int a;
         int gitCheck;
         boolean gitProverka;
         double incomeNeedForInvestments = 0.1;

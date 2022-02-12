@@ -1,11 +1,4 @@
 # Default ignored files
-/shelf/
-/.idea/workspace.xml
-/encodings.xml
-/workspace.xml
-/vcs.xml
-/modules.xml
-/misc.xml
 HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar

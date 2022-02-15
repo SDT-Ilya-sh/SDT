@@ -11,10 +11,9 @@ public class Cat
     private double weight;
     private double minWeight;
     private double maxWeight;
-<<<<<<< HEAD
-=======
+
     int a = 2;
->>>>>>> c56d713ccd16803612726f0fd57165890cb9301c
+
 
     public Cat()
     {
@@ -25,40 +24,30 @@ public class Cat
         count++;
 
     }
-<<<<<<< HEAD
+
     public static int getCount()
     {
         return count;
     }
 
-    public Cat(Double amount)
-    {
-        this();
-        this. weight= weight;
-    }
 
-=======
+
     public Cat(double weight)
     {
         this();
         this.weight = weight;
     }
 
-    public static int getCount()
-    {
-        return count;
-    }
 
 
->>>>>>> c56d713ccd16803612726f0fd57165890cb9301c
+
     public void meow()
     {
         weight = weight - 1;
         System.out.println("Meow");
     }
 
-<<<<<<< HEAD
-=======
+
     public static Cat getKitten()
     {
         Cat kitten = new Cat(1100.00);
@@ -66,7 +55,7 @@ public class Cat
 
     }
 
->>>>>>> c56d713ccd16803612726f0fd57165890cb9301c
+
     public void feed(Double amount)
     {
         if(weight > maxWeight) {

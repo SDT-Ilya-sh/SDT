@@ -11,6 +11,7 @@ public class Cat
     private double weight;
     private double minWeight;
     private double maxWeight;
+    public String catColor;
 
     int a = 2;
 
@@ -23,6 +24,14 @@ public class Cat
         maxWeight = MAX_WEIGHT;
         count++;
 
+    }
+    public Cat (String color)
+    {
+        this();
+        this.catColor=color;
+    }
+    public String getCatColor(){
+        return  catColor;
     }
 
     public static int getCount()

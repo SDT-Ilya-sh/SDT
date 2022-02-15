@@ -12,6 +12,9 @@ public class Loader {
 
         getKitten();
         getKitten();
+        Cat white = new Cat("White");
+        System.out.println(white.getCatColor());
+
         System.out.println(getKitten().getWeight());
         System.out.println(getKitten().getStatus());
         System.out.println(Cat.getCount());

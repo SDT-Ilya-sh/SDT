@@ -34,7 +34,7 @@ public class Camera
 
 
 
-            System.out.println();
+            System.out.println(weightCheck());
 
         }
 

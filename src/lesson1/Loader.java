@@ -10,15 +10,12 @@ public class Loader {
 
     public static void main(String[] args) {
 
-        getKitten();
-        getKitten();
-        Cat white = new Cat("White");
-        System.out.println(white.getCatColor());
-
-        System.out.println(getKitten().getWeight());
-        System.out.println(getKitten().getStatus());
+        Cat white = new Cat("Nigger" );
+        Cat nigga = white.getclone() ;
+        System.out.println(white.getWeight());
+        System.out.println(nigga.getCatColor());
+        System.out.println(nigga.getWeight());
         System.out.println(Cat.getCount());
-
 
     }
 }

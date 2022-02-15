@@ -1,5 +1,7 @@
 package lesson1;
 
+import lesson2.Car;
+
 public class Cat
 {
     public static final int EYES_AMOUNT = 2;
@@ -13,8 +15,6 @@ public class Cat
     private double maxWeight;
     public String catColor;
 
-    int a = 2;
-
 
     public Cat()
     {
@@ -24,6 +24,15 @@ public class Cat
         maxWeight = MAX_WEIGHT;
         count++;
 
+    }
+    public  Cat getclone()
+    {
+        Cat cat = new Cat();
+        cat.weight = weight;
+        cat.minWeight = MIN_WEIGHT;
+        cat.maxWeight = MAX_WEIGHT;
+        cat.catColor = catColor;
+        return cat;
     }
     public Cat (String color)
     {

@@ -1,51 +1,51 @@
 package lesson2;
 
 public class Car {
-    public String number;
-    public int height;
-    public double weight;
-    public boolean hasVehicle;
-    public boolean isSpecial;
+    public static String number;
+    public static int height;
+    public static double weight;
+    public static boolean hasVehicle;
+    public static boolean isSpecial;
 
 
-    public void  setNumber(int amount)
+    public void setNumber(String number)
     {
 
         this.number = number;
     }
-    public String getNumber()
+    public static  String getNumber()
     {
         return number;
     }
-    public void  setHeight(int amount)
+    public void  setHeight(int height)
     {
         this.height = height;
     }
-    public int getHeight()
+    public static int getHeight()
     {
         return height;
     }
-    public void  setWeight(Double amount)
+    public void  setWeight(Double weight)
     {
         this.weight = weight;
     }
-    public double getWeight()
+    public static double getWeight()
     {
         return weight;
     }
-    public void  setHasVehicle(boolean amount)
+    public void  setHasVehicle(boolean hasVehicle)
     {
         this.hasVehicle = hasVehicle;
     }
-    public boolean getHasVehicle()
+    public static boolean getHasVehicle()
     {
         return hasVehicle;
     }
-    public void  setIsSpecial(boolean amount)
+    public void  setIsSpecial(boolean isSpecial)
     {
         this.isSpecial = isSpecial;
     }
-    public boolean getIsSpecial()
+    public static boolean getIsSpecial()
     {
         return isSpecial;
     }

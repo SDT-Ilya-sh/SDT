@@ -26,6 +26,11 @@ public class Cat
         return count;
     }
 
+    public Cat(Double amount)
+    {
+        this();
+        this. weight= weight;
+    }
 
     public void meow()
     {

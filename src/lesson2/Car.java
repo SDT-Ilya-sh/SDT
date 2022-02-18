@@ -1,19 +1,18 @@
 package lesson2;
 
 public class Car {
-    public static String number;
-    public static int height;
-    public static double weight;
-    public static boolean hasVehicle;
-    public static boolean isSpecial;
+    private String number;
+    private int height;
+    private double weight;
+    private boolean hasVehicle;
+    private boolean isSpecial;
 
 
     public void setNumber(String number)
     {
-
         this.number = number;
     }
-    public static  String getNumber()
+    public  String getNumber()
     {
         return number;
     }
@@ -21,7 +20,7 @@ public class Car {
     {
         this.height = height;
     }
-    public static int getHeight()
+    public  int getHeight()
     {
         return height;
     }
@@ -29,7 +28,7 @@ public class Car {
     {
         this.weight = weight;
     }
-    public static double getWeight()
+    public double getWeight()
     {
         return weight;
     }
@@ -37,7 +36,7 @@ public class Car {
     {
         this.hasVehicle = hasVehicle;
     }
-    public static boolean getHasVehicle()
+    public  boolean getHasVehicle()
     {
         return hasVehicle;
     }
@@ -45,7 +44,7 @@ public class Car {
     {
         this.isSpecial = isSpecial;
     }
-    public static boolean getIsSpecial()
+    public  boolean getIsSpecial()
     {
         return isSpecial;
     }

@@ -4,37 +4,8 @@ import java.sql.SQLOutput;
 
 public class Camera
 
-{       //Проверяю работают ли сеттеры и геттеры
-        public static String numberCheck()
-        {
-
-            getNextCar().setNumber("484");
-            return Car.getNumber();
-
-
-        }
-         public static int heightCheck()
-        {
-
-            getNextCar().setHeight(228);
-            return Car.getHeight();
-
-
-        }
-         public static Double weightCheck()
-        {
-
-            getNextCar().setWeight(1488.00);
-            return Car.getWeight();
-
-
-        }
-        //Закончил проверять сеттеры и гетеры
+{
         public static void main(String[] args) {
-
-
-
-            System.out.println(weightCheck());
 
         }
 
@@ -44,11 +15,11 @@ public class Camera
         double randomWeight = 600 + 10000 * Math.random();
 
         Car car = new Car();
-        car.number = randomNumber;
-        car.height = randomHeight;
-        car.weight = randomWeight;
-        car.hasVehicle = Math.random() > 0.5;
-        car.isSpecial = Math.random() < 0.15;
+        car.setNumber(randomNumber);
+        car.setHeight(randomHeight);
+        car.setWeight(randomWeight);
+        car.setHasVehicle(Math.random() > 0.5);
+        car.setIsSpecial(Math.random() < 0.15);
 
         return car;
     }

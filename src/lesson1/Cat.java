@@ -1,7 +1,5 @@
 package lesson1;
 
-import lesson2.Car;
-
 public class Cat
 {
     public final int EYES_AMOUNT = 2;
@@ -14,6 +12,7 @@ public class Cat
     private double minWeight;
     private double maxWeight;
     public Enum<Colors> catColor;
+
 
     public Cat()
     {
@@ -62,5 +61,10 @@ public class Cat
     {
         return weight;
     }
-
+    public double getOriginWeight() {
+        return originWeight;
+    }
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
 }

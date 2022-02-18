@@ -13,9 +13,10 @@ public class Loader {
         Cat white = new Cat(Colors.WHITE);
         Cat black = new Cat(Colors.BLACK);
         Cat red = new Cat(Colors.RED);
-        System.out.println(white.getCatColor());
-        System.out.println(black.getCatColor());
-        System.out.println(red.getCatColor());
+        CatLogic.drink(white,1488.00);
+        CatLogic.meow(black);
+        CatLogic.feed(red,228.0);
+
 
     }
 }

@@ -1,51 +1,48 @@
 package lesson1;
 
+
 public class CatLogic
 {
-    public static int count=0;
-    private double originWeight;
-    private double weight;
-    private double minWeight;
-    private double maxWeight;
-    public String catColor;
-    public void meow()
+
+    public static void meow(Cat cat)
     {
-        weight = weight - 1;
+
+        cat.setWeight(cat.getWeight() - 1) ;
         System.out.println("Meow");
     }
-    public void feed(Double amount)
+    public static void feed(Cat cat, Double amount)
     {
-        if(weight > maxWeight) {
-            count=count-1;
+        if(cat.getWeight() > cat.MAX_WEIGHT) {
+            Cat.count=Cat.count-1;
             System.out.println("Your cat is fucking dead, it can`t eat!");
         }
         else
-            weight = weight + amount;
+            cat.setWeight(cat.getWeight() + amount);
 
     }
 
-    public void drink(Double amount)
+    public static void drink(Cat cat , Double amount)
     {
 
-        if(weight < minWeight) {
-            count=count-1;
+        if( cat.getWeight()< cat.MIN_WEIGHT) {
+            cat.count=cat.count-1;
             System.out.println("Your cat is fucking dead, it can`t drink!");
         }
         else
-            weight = weight + amount;
+            cat.setWeight(cat.getWeight() + amount);
 
     }
-    public String getStatus()
+    public static String getStatus(Cat cat)
     {
-        if(weight < minWeight) {
-            count=count-1;
+        if(cat.getWeight() < cat.MIN_WEIGHT) {
+            cat.count=cat.count-1;
             return "Dead";
         }
-        else if(weight > maxWeight) {
-            count--;
+        else if(cat.getWeight() > cat.MAX_WEIGHT) {
+            cat.count--;
             return "Exploded";
         }
-        else if(weight > originWeight) {
+        else if(cat.getWeight() > cat.getOriginWeight()) {
             return "Sleeping";
         }
         else {

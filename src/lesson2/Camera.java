@@ -6,7 +6,11 @@ public class Camera
 
 {
         public static void main(String[] args) {
-
+                System.out.println(getNextCar().getNumber());
+                System.out.println(getNextCar().getWeight());
+                System.out.println(getNextCar().getHeight());
+                System.out.println(getNextCar().getIsSpecial());
+                System.out.println(getNextCar().getHasVehicle());
         }
 
         public static Car getNextCar() {

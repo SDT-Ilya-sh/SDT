@@ -13,7 +13,7 @@ public class Cat
     private double weight;
     private double minWeight;
     private double maxWeight;
-    public String catColor;
+    public Enum<Colors> catColor;
 
     public Cat()
     {
@@ -33,12 +33,12 @@ public class Cat
         cat.catColor = catColor;
         return cat;
     }
-    public Cat (String color)
+    public Cat (Enum color)
     {
         this();
         this.catColor=color;
     }
-    public String getCatColor(){
+    public Enum<Colors> getCatColor(){
         return  catColor;
     }
 

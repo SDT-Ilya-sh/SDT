@@ -6,4 +6,5 @@ public enum Colors {
     BLACK_AND_WHITE,
     RED,
     TRICOLOR,
+
 }

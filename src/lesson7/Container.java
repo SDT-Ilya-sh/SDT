@@ -12,6 +12,7 @@ public class Container {
     public int getContCapacity() {
         return contCapacity;
     }
+
     public void setContCapacity(int contCapacity) {
         this.contCapacity = contCapacity;
     }

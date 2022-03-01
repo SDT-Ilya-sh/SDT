@@ -5,40 +5,33 @@ import java.util.Scanner;
 
 public class TaskScanner {
 
-    static Scanner scanner = new Scanner(System.in);
-    static ArrayList<String> toDoList = new ArrayList();
+    private final Scanner scanner = new Scanner(System.in);
 
-
-    public static void listEdit() {
-        toDoList.add("Помыться.");
-        toDoList.add("Попить чай.");
-        toDoList.add("Позаниматься спортом.");
-        toDoList.add("Писать прогу.");
-        System.out.println("Введите команду:");
-        String input = scanner.nextLine();
-        if (input.contains("ADD")) {
-            toDoList.add(input.replace("ADD ", ""));
-        }
-        else if(input.contains("DELETE")){
-            toDoList.remove(Integer.parseInt(input.replaceAll("[^0-9]",""))-1);
-        }
-        else if(input.contains("EDIT")){
-            toDoList.remove(Integer.parseInt(input.replaceAll("[0-9].+?",""))-1);
-            toDoList.add(Integer.parseInt(input.replaceAll("[0-9].+?",""))-1,
-                    input.replaceAll("(EDIT)+(\\s+)+[0-9].+?","").trim());
-        }
-        else if(input.contains("LIST")){
-            printArray(toDoList);
+    public void listEdit(ArrayList<String> list) {
+        while (true) {
+            System.out.println("Введите команду:");
+            String input = scanner.nextLine();
+            if (input.contains("ADD")) {
+                list.add(input.replace("ADD ", ""));
+            } else if (input.contains("DELETE")) {
+                list.remove(Integer.parseInt(ExtractingEditNumber.extractNumber(input)) - 1);
+            } else if (input.contains("EDIT")) {
+                list.remove(Integer.parseInt(ExtractingEditNumber.extractNumber(input)) - 1);
+                list.add(Integer.parseInt(ExtractingEditNumber.extractNumber(input)) - 1,
+                        input.replaceAll("(EDIT)+(\\s+)+[0-9]+", "").trim());
+            } else if (input.contains("LIST")) {
+                printArray(list);
+            } else if (input.contains("EXIT")) {
+                break;
+            }
         }
     }
 
-    public static void printArray(ArrayList<String> arrayList) {
+    private void printArray(ArrayList<String> list) {
         int c = 1;
-        for (String s : arrayList) {
+        for (String s : list) {
             System.out.println("Дело номер " + c + " - " + s);
             c++;
         }
-
-
     }
 }

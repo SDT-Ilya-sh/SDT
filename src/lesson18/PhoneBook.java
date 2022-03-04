@@ -15,18 +15,22 @@ public class PhoneBook {
                 printMap(contactBook);
                 continue;
             }
-            if (PhoneCheck.phoneCheck(input)) {
+            if (contactBook.containsValue(input)) {
+                System.out.println("Номер телефона данного абонента => "+ getKey(contactBook, input));
+                continue;
+            }
+                if (PhoneCheck.phoneCheck(input)) {
                 String formattedPhone = PhoneFormatting.phoneFormat(input);
                 if (contactBook.containsKey(formattedPhone)) {
                     System.out.println(contactBook.get(formattedPhone));
+
                 } else {
                     System.out.println("Введите имя абонента для добавления в записную книгу: ");
                     String name = scanner.nextLine();
                     contactBook.put(formattedPhone, name);
+                    continue;
                 }
-            } else if (contactBook.containsValue(input)) {
-                System.out.println(getkey(contactBook, input));
-                continue;
+
             } else {
                 System.out.println("Введите номер абонента : ");
                 String phoneToAdd = scanner.nextLine();
@@ -39,13 +43,14 @@ public class PhoneBook {
         }
     }
 
-    private String getkey(HashMap<String, String> contactBook, String input) {
+    private String getKey(HashMap<String, String> contactBook, String input) {
+        String key = "";
         for (String keyCheck : contactBook.keySet()) {
             if (contactBook.get(keyCheck).equals(input)) {
-                return keyCheck;
+                key = keyCheck;
             }
         }
-        return null;
+        return key;
     }
 
     private void printMap(HashMap<String, String> map) {

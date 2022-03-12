@@ -16,7 +16,6 @@ public class ArrayFilling {
                     String number = String.format("%s%d%d%d%s%s%s", numLetters, j, j, j, numLetters, numLetters, region);
                     list.add(number);
                 }
-
             }
         }
         Collections.sort(list);
